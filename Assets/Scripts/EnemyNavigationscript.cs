@@ -7,6 +7,7 @@ public class EnemyNavigationscript : MonoBehaviour
     public NavMeshAgent agent;
     public Transform target;
     public Animator enemyAnimator;
+    public float detectionRadius;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -20,12 +21,21 @@ public class EnemyNavigationscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.velocity.magnitude > 0.1)
+
+        if (target == null) return;
+
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+        if (distanceToTarget <= detectionRadius)
         {
+            agent.speed = 0.4f;
             enemyAnimator.SetBool("isWalking", true);
+            
         }
+
         else
         {
+            agent.speed = 0;
             enemyAnimator.SetBool("isWalking", false);
         }
     }
@@ -34,4 +44,5 @@ public class EnemyNavigationscript : MonoBehaviour
     {
         agent.destination = target.position;
     }
+
 }

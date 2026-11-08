@@ -210,6 +210,7 @@ MonoBehaviour:
   healthText: {fileID: 7265367008130185283}
   healthBar: {fileID: 6173740418165201742}
   health: 100
+  enemyAnimator: {fileID: 0}
 --- !u!195 &7246875838343276531
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -247,6 +248,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   target: {fileID: 0}
   enemyAnimator: {fileID: 0}
+  detectionRadius: 8.5
 --- !u!1 &3391134002845449785
 GameObject:
   m_ObjectHideFlags: 0
