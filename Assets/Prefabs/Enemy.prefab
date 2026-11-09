@@ -211,6 +211,9 @@ MonoBehaviour:
   healthBar: {fileID: 6173740418165201742}
   health: 100
   enemyAnimator: {fileID: 0}
+  collider: {fileID: 0}
+  canvas: {fileID: 0}
+  navMesh: {fileID: 0}
 --- !u!195 &7246875838343276531
 NavMeshAgent:
   m_ObjectHideFlags: 0
